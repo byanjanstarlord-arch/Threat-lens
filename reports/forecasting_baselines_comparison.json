@@ -1,0 +1,100 @@
+{
+  "test_windows_count": 743,
+  "trivial_baseline_pr_auc": 0.800807537012113,
+  "sensitivity_analysis": [
+    {
+      "gap_threshold_sec": 60,
+      "number_of_campaigns": 49,
+      "campaigns_with_pre_onset_warning": 34,
+      "campaign_detection_rate_pct": 69.38775510204081,
+      "mean_onset_lead_sec": 214.08879358628218,
+      "median_onset_lead_sec": 226.42578125
+    },
+    {
+      "gap_threshold_sec": 120,
+      "number_of_campaigns": 33,
+      "campaigns_with_pre_onset_warning": 25,
+      "campaign_detection_rate_pct": 75.75757575757575,
+      "mean_onset_lead_sec": 233.80540283203126,
+      "median_onset_lead_sec": 240.5078125
+    },
+    {
+      "gap_threshold_sec": 300,
+      "number_of_campaigns": 27,
+      "campaigns_with_pre_onset_warning": 20,
+      "campaign_detection_rate_pct": 74.07407407407408,
+      "mean_onset_lead_sec": 236.62237854003905,
+      "median_onset_lead_sec": 237.9658203125
+    },
+    {
+      "gap_threshold_sec": 600,
+      "number_of_campaigns": 6,
+      "campaigns_with_pre_onset_warning": 2,
+      "campaign_detection_rate_pct": 33.33333333333333,
+      "mean_onset_lead_sec": 207.81130981445312,
+      "median_onset_lead_sec": 207.81130981445312
+    }
+  ],
+  "baselines": [
+    {
+      "model": "Baseline A: Majority-Class Predictor (Constant 1)",
+      "precision": 0.800807537012113,
+      "recall": 1.0,
+      "f1_score": 0.8893871449925261,
+      "roc_auc": 0.5,
+      "pr_auc": 0.800807537012113,
+      "campaign_detection_rate": 100.0,
+      "campaigns_detected": 27,
+      "pre_onset_warning_windows": 135,
+      "tp": 595,
+      "fp": 148,
+      "tn": 0,
+      "fn": 0
+    },
+    {
+      "model": "Baseline B: Persistence / Recent Activity Predictor",
+      "precision": 0.6791208791208792,
+      "recall": 0.519327731092437,
+      "f1_score": 0.5885714285714285,
+      "roc_auc": 0.1918635021576198,
+      "pr_auc": 0.6772258839558576,
+      "campaign_detection_rate": 100.0,
+      "campaigns_detected": 27,
+      "pre_onset_warning_windows": 135,
+      "tp": 309,
+      "fp": 146,
+      "tn": 2,
+      "fn": 286
+    },
+    {
+      "model": "Baseline C: Traffic Intensity / Flow Count Predictor",
+      "precision": 0.800807537012113,
+      "recall": 1.0,
+      "f1_score": 0.8893871449925261,
+      "roc_auc": 0.23960367930956167,
+      "pr_auc": 0.7009179148739608,
+      "campaign_detection_rate": 100.0,
+      "campaigns_detected": 27,
+      "pre_onset_warning_windows": 135,
+      "tp": 595,
+      "fp": 148,
+      "tn": 0,
+      "fn": 0
+    },
+    {
+      "model": "ThreatLens XGBoost Temporal Forecaster",
+      "precision": 0.9512195121951219,
+      "recall": 0.7210084033613445,
+      "f1_score": 0.8202676864244742,
+      "roc_auc": 0.8349875085169203,
+      "pr_auc": 0.9595585116791427,
+      "campaign_detection_rate": 74.07407407407408,
+      "campaigns_detected": 20,
+      "pre_onset_warning_windows": 82,
+      "tp": 429,
+      "fp": 22,
+      "tn": 126,
+      "fn": 166
+    }
+  ]
+}

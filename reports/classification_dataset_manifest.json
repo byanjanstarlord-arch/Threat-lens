@@ -1,0 +1,78 @@
+{
+  "dataset_name": "ThreatLens AI - CIC-IDS2017 Classification Partition Manifest",
+  "total_cleaned_rows": 2830743,
+  "total_duplicate_rows_feature_columns": 331919,
+  "total_unique_feature_rows": 2498824,
+  "total_rows_used_for_classification": 180503,
+  "percentage_of_clean_rows_used": 6.376523760722891,
+  "sampling_applied": true,
+  "sampling_strategy": "Stratified class-capped sampling: BENIGN capped at 50,000; majority attack classes (DOS, PORT_SCAN, DDOS) capped at 40,000; minority classes kept in full (BRUTE_FORCE: 13,835; WEB_ATTACK: 2,180; BOTNET: 1,966; OTHER_ATTACK: 47).",
+  "random_seed": 42,
+  "sampling_timing": "Performed BEFORE splitting into Train (70%), Val (15%), Test (15%), followed by deterministic cross-split duplicate quarantine removing train-identical vectors from val and test.",
+  "class_distribution_before_sampling": {
+    "BENIGN": 2273097,
+    "DOS": 252661,
+    "PORT_SCAN": 158930,
+    "DDOS": 128027,
+    "BRUTE_FORCE": 13835,
+    "WEB_ATTACK": 2180,
+    "BOTNET": 1966,
+    "OTHER_ATTACK": 47
+  },
+  "class_distribution_sampled_total": {
+    "BENIGN": 50000,
+    "DOS": 40000,
+    "PORT_SCAN": 40000,
+    "DDOS": 40000,
+    "BRUTE_FORCE": 13835,
+    "WEB_ATTACK": 2180,
+    "BOTNET": 1966,
+    "OTHER_ATTACK": 47
+  },
+  "partition_counts_post_quarantine": {
+    "train": {
+      "total": 131618,
+      "classes": {
+        "BENIGN": 35000,
+        "DOS": 28000,
+        "PORT_SCAN": 28000,
+        "DDOS": 28000,
+        "BRUTE_FORCE": 9684,
+        "WEB_ATTACK": 1526,
+        "BOTNET": 1376,
+        "OTHER_ATTACK": 32
+      }
+    },
+    "validation": {
+      "initial": 28203,
+      "quarantined_duplicates": 3709,
+      "final": 24494,
+      "classes": {
+        "BENIGN": 7381,
+        "DDOS": 5999,
+        "DOS": 4645,
+        "PORT_SCAN": 4510,
+        "BRUTE_FORCE": 1343,
+        "WEB_ATTACK": 317,
+        "BOTNET": 292,
+        "OTHER_ATTACK": 7
+      }
+    },
+    "test": {
+      "initial": 28207,
+      "quarantined_duplicates": 3816,
+      "final": 24391,
+      "classes": {
+        "BENIGN": 7330,
+        "DDOS": 6000,
+        "DOS": 4639,
+        "PORT_SCAN": 4454,
+        "BRUTE_FORCE": 1349,
+        "WEB_ATTACK": 319,
+        "BOTNET": 292,
+        "OTHER_ATTACK": 8
+      }
+    }
+  },
+  "sampling_bias_analysis": "Downsampling BENIGN by 97.8% (from 2.27M to 50k) dramatically increases the attack prevalence from 19.7% to 73.4% in the training set. While this intentional rebalancing ensures the gradient boosting trees can learn sharp decision boundaries for minority attack vectors (Web Attack, Botnet) without being dominated by benign majority noise, it creates a class distribution shift relative to raw production network traffic. Consequently, raw classifier probabilities reflect the balanced sample rather than true network base rates, requiring composite risk assessment and careful thresholding."
+}

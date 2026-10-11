@@ -1,0 +1,58 @@
+{
+  "model_type": "XGBoostForecaster",
+  "train_time_sec": 0.09,
+  "window_size_sec": 60,
+  "forecast_horizon_sec": 300,
+  "decision_threshold": 0.50,
+  "threshold_selection": "Frozen from validation partition precision objective (>= 0.50 on Thursday)",
+  "precision": 0.9512195121951219,
+  "recall": 0.7210084033613445,
+  "f1_score": 0.8202676864244742,
+  "roc_auc": 0.8349875085169203,
+  "pr_auc": 0.9595585116791427,
+  "trivial_baseline_pr_auc": 0.800807537012113,
+  "excess_pr_auc": 0.15875097466702972,
+  "false_positive_rate": 0.14864864864864866,
+  "false_negative_rate": 0.27899159663865547,
+  "confusion_matrix": [
+    [
+      126,
+      22
+    ],
+    [
+      166,
+      429
+    ]
+  ],
+  "window_level_lead_time_metrics": {
+    "mean_lead_time_sec": 27.210622080556163,
+    "median_lead_time_sec": 0.2314453125,
+    "min_lead_time_sec": 0.0,
+    "max_lead_time_sec": 289.4736328125,
+    "evaluated_warnings_count": 429,
+    "warning_types": {
+      "genuine_pre_onset_warnings": 82,
+      "ongoing_campaign_warnings": 347,
+      "false_positive_warnings": 22
+    }
+  },
+  "event_level_campaign_metrics": {
+    "total_attack_campaigns": 27,
+    "campaigns_with_pre_onset_warning": 20,
+    "campaign_level_detection_rate": 0.7407407407407407,
+    "genuine_onset_lead_time_metrics": {
+      "evaluated_campaigns_count": 20,
+      "mean_lead_time_sec": 236.6224169921875,
+      "median_lead_time_sec": 237.9658203125,
+      "p25_lead_time_sec": 213.3106689453125,
+      "p75_lead_time_sec": 266.3822021484375,
+      "p90_lead_time_sec": 286.498876953125,
+      "p95_lead_time_sec": 288.3168212890625,
+      "max_lead_time_sec": 289.4736328125,
+      "pct_greater_than_5s": 100.0,
+      "pct_greater_than_30s": 100.0,
+      "pct_greater_than_60s": 100.0,
+      "pct_greater_than_120s": 100.0
+    }
+  }
+}

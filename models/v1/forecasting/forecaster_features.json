@@ -1,0 +1,18 @@
+[
+  "flow_count",
+  "total_bytes",
+  "total_packets",
+  "byte_rate",
+  "packet_rate",
+  "syn_flag_count",
+  "ack_flag_count",
+  "fin_flag_count",
+  "rst_flag_count",
+  "mean_flow_duration",
+  "rolling_mean_flow_count_3",
+  "rolling_mean_byte_rate_3",
+  "rolling_max_packet_rate_3",
+  "flow_growth_rate",
+  "syn_to_ack_ratio",
+  "bytes_per_packet"
+]

@@ -1,0 +1,106 @@
+{
+  "sample_size": 500,
+  "feature_count": 69,
+  "top_features": [
+    {
+      "rank": 1,
+      "feature": "Destination Port",
+      "mean_abs_shap": 1.5217299461364746
+    },
+    {
+      "rank": 2,
+      "feature": "min_seg_size_forward",
+      "mean_abs_shap": 0.46507999300956726
+    },
+    {
+      "rank": 3,
+      "feature": "Init_Win_bytes_backward",
+      "mean_abs_shap": 0.4339900016784668
+    },
+    {
+      "rank": 4,
+      "feature": "Bwd Packets/s",
+      "mean_abs_shap": 0.4300599992275238
+    },
+    {
+      "rank": 5,
+      "feature": "Bwd Packet Length Min",
+      "mean_abs_shap": 0.18166999518871307
+    },
+    {
+      "rank": 6,
+      "feature": "act_data_pkt_fwd",
+      "mean_abs_shap": 0.17233000695705414
+    },
+    {
+      "rank": 7,
+      "feature": "Init_Win_bytes_forward",
+      "mean_abs_shap": 0.1703300029039383
+    },
+    {
+      "rank": 8,
+      "feature": "Bwd Packet Length Std",
+      "mean_abs_shap": 0.15437999367713928
+    },
+    {
+      "rank": 9,
+      "feature": "Avg Fwd Segment Size",
+      "mean_abs_shap": 0.15312999486923218
+    },
+    {
+      "rank": 10,
+      "feature": "Fwd Packet Length Max",
+      "mean_abs_shap": 0.14680999517440796
+    },
+    {
+      "rank": 11,
+      "feature": "Bwd Header Length",
+      "mean_abs_shap": 0.14380000531673431
+    },
+    {
+      "rank": 12,
+      "feature": "PSH Flag Count",
+      "mean_abs_shap": 0.13654999434947968
+    },
+    {
+      "rank": 13,
+      "feature": "Packet Length Mean",
+      "mean_abs_shap": 0.13425999879837036
+    },
+    {
+      "rank": 14,
+      "feature": "Fwd IAT Min",
+      "mean_abs_shap": 0.12292999774217606
+    },
+    {
+      "rank": 15,
+      "feature": "Min Packet Length",
+      "mean_abs_shap": 0.12078999727964401
+    },
+    {
+      "rank": 16,
+      "feature": "Flow IAT Min",
+      "mean_abs_shap": 0.08907999843358994
+    },
+    {
+      "rank": 17,
+      "feature": "Avg Bwd Segment Size",
+      "mean_abs_shap": 0.0737999975681305
+    },
+    {
+      "rank": 18,
+      "feature": "Subflow Bwd Bytes",
+      "mean_abs_shap": 0.07277999818325043
+    },
+    {
+      "rank": 19,
+      "feature": "Fwd Header Length",
+      "mean_abs_shap": 0.07182999700307846
+    },
+    {
+      "rank": 20,
+      "feature": "Flow Bytes/s",
+      "mean_abs_shap": 0.0699400007724762
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "model_type": "IsolationForest",
+  "train_time_sec": 0.39,
+  "calibrated_threshold": 0.5790643032458008,
+  "test_roc_auc": 0.7304973614859065,
+  "benign_false_alarm_rate": 0.028922237380627557,
+  "attack_detection_rate": 0.26012543227243423,
+  "total_test_evaluated": 24391
+}

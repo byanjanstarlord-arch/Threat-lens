@@ -1,0 +1,29 @@
+{
+  "status": "SUCCESS",
+  "total_clean_flows": 2830743,
+  "track_a_classification": {
+    "train_rows": 131618,
+    "val_rows": 24494,
+    "test_rows": 24391,
+    "feature_count": 69,
+    "quarantined_duplicates": {
+      "train_rows": 131618,
+      "val_initial_rows": 28203,
+      "val_quarantined_duplicates": 3709,
+      "val_final_rows": 24494,
+      "test_initial_rows": 28207,
+      "test_quarantined_duplicates": 3816,
+      "test_final_rows": 24391
+    }
+  },
+  "track_b_forecasting": {
+    "window_size_sec": 60,
+    "horizon_sec": 300,
+    "train_windows": 2433,
+    "train_future_attack_windows": 1606,
+    "val_windows": 322,
+    "val_future_attack_windows": 138,
+    "test_windows": 743,
+    "test_future_attack_windows": 595
+  }
+}
